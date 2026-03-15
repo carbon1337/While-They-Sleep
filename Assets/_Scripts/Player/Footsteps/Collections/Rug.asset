@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d8a85e700e0514090bcf82e3b6d752, type: 3}
+  m_Name: Rug
+  m_EditorClassIdentifier: 
+  footstepSounds:
+  - {fileID: 8300000, guid: fbb8ee09f6d45f54d84383b81ca5a5cd, type: 3}
+  - {fileID: 8300000, guid: 3fb042d8273dfd141955633820660a4f, type: 3}
+  - {fileID: 8300000, guid: eb73ae3e299f426418476df5f1fb0f53, type: 3}
+  - {fileID: 8300000, guid: 553615e2b22e2db44b1e1057668753ab, type: 3}
+  - {fileID: 8300000, guid: 837b2ac0dee4b2e49b7c4229129a2cd2, type: 3}
+  - {fileID: 8300000, guid: 55a810a67df804d4487e8f990523255b, type: 3}
+  - {fileID: 8300000, guid: dffb2ef44d2dd254aa89c2546475cf3c, type: 3}
+  - {fileID: 8300000, guid: 74a0ecc6d5d37bf4f8fe4544dfcd9e8b, type: 3}
+  jumpSound: {fileID: 8300000, guid: 64a62780b84db9645b00e69eb0621928, type: 3}
+  landSound: {fileID: 8300000, guid: 9064dac268872fd48bf90e84554267ab, type: 3}
