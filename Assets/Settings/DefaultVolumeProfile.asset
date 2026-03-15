@@ -241,22 +241,22 @@ MonoBehaviour:
     m_Value: 1
   FogColor:
     m_OverrideState: 1
-    m_Value: {r: 0.06888571, g: 0.07414796, b: 0.11320752, a: 1}
+    m_Value: {r: 0.10951406, g: 0.11928378, b: 0.21698111, a: 1}
   FogDesnity:
     m_OverrideState: 1
-    m_Value: 0.103
+    m_Value: 0.222
   FogNoiseStrength:
     m_OverrideState: 1
-    m_Value: 0.456
+    m_Value: 0.684
   FogEdgeSmoothness:
     m_OverrideState: 1
     m_Value: 0.5
   FogNoiseScale:
     m_OverrideState: 1
-    m_Value: 0.457
+    m_Value: 0.81
   FogNoiseStart:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.759
 --- !u!114 &-5520245016509672950
 MonoBehaviour:
   m_ObjectHideFlags: 3
