@@ -1,4 +1,4 @@
-using System.Runtime.CompilerServices;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,11 +6,17 @@ public class MenuController : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level");
+        ScreenFader.Instance.FadeToScene("Level");
     }
 
     public void QuitGame()
     {
+        StartCoroutine(QuitGameRoutine());
+    }
+
+    private IEnumerator QuitGameRoutine()
+    {
+        yield return StartCoroutine(ScreenFader.Instance.FadeOut());
         Application.Quit();
     }
 }
