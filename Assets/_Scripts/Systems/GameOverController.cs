@@ -17,7 +17,13 @@ public class GameOverController : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        //Ensure only one GameOverController exists
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(gameObject); 
+            return; 
+        }
+
         Instance = this;
 
         // Auto-find if you didn’t assign in Inspector
@@ -28,18 +34,18 @@ public class GameOverController : MonoBehaviour
 
     public void TriggerLose()
     {
-        // ...audio cutoff...
-
+        //player movement freezes
         if (fpsController != null)
         {
             fpsController.SetFrozen(true);
             fpsController.SetLookState(false);
         }
 
-        if (playerInput != null)
-            playerInput.enabled = false;
+        if (playerInput != null) playerInput.enabled = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        JumpscareManager.Instance.TriggerJumpscare();
     }
 }

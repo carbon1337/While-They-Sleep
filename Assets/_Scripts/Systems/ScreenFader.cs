@@ -25,6 +25,8 @@ public class ScreenFader : MonoBehaviour
     [Header("Fade Settings")]
     public float fadeDuration = 0.6f;
 
+    bool isTransitioning = false;
+
     private CanvasGroup canvasGroup;
 
     #region Initialization
@@ -55,18 +57,19 @@ public class ScreenFader : MonoBehaviour
     //Creates fullscreen canvas and fade panel
     void CreateOverlay()
     {
-        GameObject canvasGO = new GameObject("FadeCanvas");
-        canvasGO.transform.SetParent(transform);
+        GameObject canvasObject = new GameObject("FadeCanvas");
+        canvasObject.transform.SetParent(transform);
 
-        Canvas canvas = canvasGO.AddComponent<Canvas>();
+        Canvas canvas = canvasObject.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        //Ensures fade appears above all else on screen
         canvas.sortingOrder = 9999;
 
-        canvasGO.AddComponent<CanvasScaler>();
-        canvasGO.AddComponent<GraphicRaycaster>();
+        canvasObject.AddComponent<CanvasScaler>();
+        canvasObject.AddComponent<GraphicRaycaster>();
 
         GameObject panelGO = new GameObject("FadePanel");
-        panelGO.transform.SetParent(canvasGO.transform);
+        panelGO.transform.SetParent(canvasObject.transform);
 
         Image panelImage = panelGO.AddComponent<Image>();
         panelImage.color = Color.black;
@@ -133,12 +136,15 @@ public class ScreenFader : MonoBehaviour
     //Public function used to start a fade transition to a new scene
     public void FadeToScene(string sceneName)
     {
+        if(isTransitioning) return;
         StartCoroutine(FadeToSceneRoutine(sceneName));
     }
 
-    //Handles fade → scene load → fade in
     IEnumerator FadeToSceneRoutine(string sceneName)
     {
+        //Bool to prevent double-transitions/interruptions
+        isTransitioning = true;
+
         //Fade screen to black
         yield return StartCoroutine(FadeOut());
 
@@ -153,6 +159,8 @@ public class ScreenFader : MonoBehaviour
 
         //Fade back into gameplay
         yield return StartCoroutine(FadeIn());
+
+        isTransitioning = false;
     }
 
     #endregion
