@@ -48,6 +48,7 @@ public class NoiseMeterUI : MonoBehaviour
 
         if (canvasGroup == null)
             canvasGroup = GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 0f;
 
         rect = GetComponent<RectTransform>();
 

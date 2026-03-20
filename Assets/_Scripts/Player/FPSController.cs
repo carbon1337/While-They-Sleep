@@ -103,9 +103,12 @@ public class FPSController : MonoBehaviour
             currentCamCrouchOffset = 0f;
         }
 
-        //Lock and hide cursor (standard for FPS controls)
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if(!isFrozen)
+        {
+            //Lock and hide cursor (standard for FPS controls)
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
 
         //Initialize ground layer
         swapper?.CheckLayers();
@@ -238,7 +241,9 @@ public class FPSController : MonoBehaviour
 
         //Apply slight downward force to keep the player grounded
         if (characterController.isGrounded && velocity.y < 0f)
+        {
             velocity.y = -2f;
+        }
 
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
