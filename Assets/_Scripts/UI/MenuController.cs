@@ -60,9 +60,9 @@ public class MenuController : MonoBehaviour
             }
 
             //Disables/enables the UI and player movement
-            pauseUI.SetActive(isPaused);
+            pauseUI?.SetActive(isPaused);
             fPSController.SetFrozen(isPaused);
-            PlayerUI.SetActive(!isPaused);
+            PlayerUI?.SetActive(!isPaused);
         }
 
         //Actually "Pauses" the game if not on menu

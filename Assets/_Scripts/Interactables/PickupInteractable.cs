@@ -225,6 +225,13 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         //Store current object rotation as the held base rotation
         heldRotation = rb.rotation;
 
+        //Reports that the task was completed if possible
+        TaskReporter taskReporter = GetComponent<TaskReporter>();
+        if (taskReporter != null)
+        {
+            taskReporter.ReportTask();
+        }
+
         PlayPickupSound();
         TryPlayGoblinVoiceLine();
     }

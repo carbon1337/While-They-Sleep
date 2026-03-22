@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5773074064154549511}
   - component: {fileID: 5647556444621157409}
   - component: {fileID: 8999121848428779620}
+  - component: {fileID: 6915377775268698524}
   m_Layer: 0
   m_Name: Tin_1
   m_TagString: Pickup
@@ -438,3 +439,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6915377775268698524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3862076162257440108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b76761cbbe781a499d33662cee0ea59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reportType: 1
+  targetID: KitchenFood
+  amount: 1
+  reportOnlyOnce: 1

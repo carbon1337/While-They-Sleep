@@ -4,7 +4,7 @@ Interactable mattress that lets the player end the run by sleeping.
 Checks extraction rules, freezes the player, fades the screen out,
 then loads the extract UI scene.
 
-*/
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -82,3 +82,5 @@ public class ExtractMattressInteractable : MonoBehaviour, IInteractable
     }
     #endregion
 }
+
+*/

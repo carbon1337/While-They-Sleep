@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3191759019784170871}
   - component: {fileID: 1067544536467858001}
-  - component: {fileID: 5183742511092370578}
   - component: {fileID: 1403491386978442594}
   - component: {fileID: 5693333865773816525}
+  - component: {fileID: 5459035997048420635}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -55,19 +55,6 @@ MonoBehaviour:
   timeAtMaxToLose: 2
   loseScreamClip: {fileID: 0}
   screamVolume: 10
---- !u!114 &5183742511092370578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9043147900665386579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcded81afb4979748a1229499604050b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!114 &1403491386978442594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,11 +85,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd250ad3869d3b409a2550cf18f0231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  jumpscareCamera: {fileID: 0}
   jumpscareAnchor: {fileID: 0}
-  jumpscarePrefab: {fileID: 5052452939428053810, guid: 5c134e67e6291ac42afc1ad5113b5419, type: 3}
+  jumpscarePrefab: {fileID: 4283329172219295530, guid: 896169ac3a0777d4991309b44cedd07c, type: 3}
   jumpscareAudioSource: {fileID: 0}
-  jumpscareSFX: {fileID: 8300000, guid: 7131d701ae015a54aa3d856feccd513f, type: 3}
+  jumpscareSFX: {fileID: 8300000, guid: e72fc2250b80533499987351cb43f82d, type: 3}
+  gameplayUI: {fileID: 0}
   scareDuration: 1.25
   shakeDuration: 0.75
   shakeStrength: 0.35
+--- !u!114 &5459035997048420635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9043147900665386579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2527e60626fe6a7449c3c4fef11e5637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTasks: []
+  taskUIController: {fileID: 0}
