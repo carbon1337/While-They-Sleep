@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class TaskData
+[CreateAssetMenu(fileName = "New TaskData", menuName = "Create New TaskData")]
+public class TaskData : ScriptableObject
 {
     [Header("Basic Info")]
     public string taskID; //Internal Name
     public string taskName; //Display Name
     [TextArea] public string description;
+    public AudioClip taskCompletionAudioClip;
 
     [Header("Task Settings")]
     public TaskType taskType;

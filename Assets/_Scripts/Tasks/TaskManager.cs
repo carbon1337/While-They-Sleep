@@ -12,6 +12,10 @@ public class TaskManager : MonoBehaviour
     [Header("UI")]
     public TaskUIController taskUIController;
 
+    [Header("Audio")]
+    public AudioSource taskAudioSource;
+    public float taskAudioVolume = 1f;
+
     #region Initialization
     private void Awake()
     {
@@ -104,6 +108,9 @@ public class TaskManager : MonoBehaviour
         //Set the taskstate and required amounts to completion
         task.taskState = TaskState.Completed;
         task.currentAmount = task.requiredAmount;
+
+        //Play the audio for completing the task
+        taskAudioSource.PlayOneShot(task.taskCompletionAudioClip, taskAudioVolume);
 
         //Unlock next tasks if possible
         UnlockAvailableTasks();
