@@ -93,7 +93,7 @@ public class JumpscareManager : MonoBehaviour
         yield return new WaitForSeconds(scareDuration);
 
         //Fade to lose screen
-        ScreenFader.Instance.FadeToScene("MainMenu");
+        ScreenFader.Instance.FadeToScene(0);
     }
 
     IEnumerator ShakeCamera()

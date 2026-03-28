@@ -7,4 +7,5 @@ public class NightTaskGroup : ScriptableObject
 {
     public string nightName;
     public List<TaskData> tasks;
+    public bool isStealth;
 }

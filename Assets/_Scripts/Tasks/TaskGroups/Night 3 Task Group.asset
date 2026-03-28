@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8637a0ea16c104c438abb0621bb2b178, type: 3}
   m_Name: Night 3 Task Group
   m_EditorClassIdentifier: 
-  nightName: Night 1
+  nightName: Night 3
   tasks:
   - {fileID: 11400000, guid: 648f344a3900aec4eb6c96a807355fd8, type: 2}
   - {fileID: 11400000, guid: ffb7d7942e475714cb7d3394c9e8d1b9, type: 2}
   - {fileID: 11400000, guid: e19d0de2cc27956479ed3429d2b7c00c, type: 2}
+  isStealth: 0

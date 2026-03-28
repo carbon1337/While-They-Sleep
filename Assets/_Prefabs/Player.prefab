@@ -204,11 +204,11 @@ MonoBehaviour:
   timeBetweenFootsteps: 0.6
   timeBetweenFootstepsRunning: 0.35
   timeBetweenFootstepsCrouch: 0.8
-  footstepPitchMin: 0.95
-  footstepPitchMax: 1.05
+  footstepPitchMin: 0.8
+  footstepPitchMax: 1.1
   runVolume: 1
-  walkVolume: 0.6
-  crouchVolume: 0.2
+  walkVolume: 0.399
+  crouchVolume: 0.101
   walkNoiseAmount: 1
   runNoiseAmount: 6
 --- !u!114 &8452574263368193433
@@ -252,7 +252,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

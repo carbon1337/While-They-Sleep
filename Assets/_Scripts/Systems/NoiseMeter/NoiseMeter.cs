@@ -15,6 +15,7 @@ public class NoiseMeter : MonoBehaviour
     public static NoiseMeter Instance { get; private set; }
 
     [Header("Noise Settings")]
+    public bool stealthEnabled = true;
     [SerializeField] private float maxNoise = 100f;
     [SerializeField] private float riseSpeed = 6f;
     [SerializeField] private float decaySpeed = 25f;
@@ -28,7 +29,6 @@ public class NoiseMeter : MonoBehaviour
     [SerializeField] private AudioClip loseScreamClip;
     [SerializeField] private float screamVolume = 1f;
 
-    //Audio source used for the lose scream
     private AudioSource screamSource;
 
     //Target noise is the actual gameplay value being pushed up and down
@@ -90,7 +90,7 @@ public class NoiseMeter : MonoBehaviour
     #region Update Loop
     private void Update()
     {
-        if (hasLost)
+        if (hasLost || !stealthEnabled)
             return;
 
         UpdateNoiseDecay();
@@ -197,6 +197,13 @@ public class NoiseMeter : MonoBehaviour
 
         screamSource.volume = screamVolume;
         screamSource.Play();
+    }
+    #endregion
+
+    #region Utility
+    public void ToggleStealth(bool isStealthLevel)
+    {
+        stealthEnabled = isStealthLevel;
     }
     #endregion
 }

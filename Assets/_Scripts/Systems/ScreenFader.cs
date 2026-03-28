@@ -134,13 +134,13 @@ public class ScreenFader : MonoBehaviour
     #region Scene Transition
 
     //Public function used to start a fade transition to a new scene
-    public void FadeToScene(string sceneName)
+    public void FadeToScene(int sceneIndex)
     {
         if(isTransitioning) return;
-        StartCoroutine(FadeToSceneRoutine(sceneName));
+        StartCoroutine(FadeToSceneRoutine(sceneIndex));
     }
 
-    IEnumerator FadeToSceneRoutine(string sceneName)
+    IEnumerator FadeToSceneRoutine(int sceneIndex)
     {
         //Bool to prevent double-transitions/interruptions
         isTransitioning = true;
@@ -149,7 +149,7 @@ public class ScreenFader : MonoBehaviour
         yield return StartCoroutine(FadeOut());
 
         //Begin loading scene
-        AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneName);
+        AsyncOperation loadOp = SceneManager.LoadSceneAsync(sceneIndex);
 
         //Wait for load to finish
         while (!loadOp.isDone)

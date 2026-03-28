@@ -8,7 +8,7 @@ noise meter impact, and optional goblin voice lines on pickup.
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class PickupInteractable : MonoBehaviour, IInteractable
 {
     //Core references
@@ -71,16 +71,6 @@ public class PickupInteractable : MonoBehaviour, IInteractable
             new Keyframe(1f, 1f)
         );
 
-    [Header("Goblin Voice Lines")]
-    [Range(0f, 1f)]
-    [SerializeField] private float voicePlayChance = 0.25f;
-
-    [SerializeField] private float minTimeBetweenLines = 2.0f;
-    [SerializeField] private AudioClip[] goblinVoiceLines;
-    [SerializeField] private AudioSource goblinVoiceSource;
-
-    private static float nextAllowedVoiceTime = 0f;
-
     #region Initialization
     private void Awake()
     {
@@ -114,12 +104,6 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         itemAudioSource.playOnAwake = false;
         itemAudioSource.spatialBlend = 1f;
         itemAudioSource.rolloffMode = AudioRolloffMode.Logarithmic;
-
-        //Fallback goblin voice source to the main camera if none was assigned
-        if (goblinVoiceSource == null && Camera.main != null)
-        {
-            goblinVoiceSource = Camera.main.GetComponent<AudioSource>();
-        }
     }
     #endregion
 
@@ -233,7 +217,6 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         }
 
         PlayPickupSound();
-        TryPlayGoblinVoiceLine();
     }
 
     private void Drop()
@@ -364,22 +347,6 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         }
 
         NoiseMeter.Instance.AddNoise(finalNoise);
-    }
-    #endregion
-
-    #region Voice Lines
-    private void TryPlayGoblinVoiceLine()
-    {
-        if (goblinVoiceLines == null || goblinVoiceLines.Length == 0) return;
-        if (goblinVoiceSource == null) return;
-        if (Time.time < nextAllowedVoiceTime) return;
-        if (Random.value > voicePlayChance) return;
-
-        AudioClip clip = goblinVoiceLines[Random.Range(0, goblinVoiceLines.Length)];
-        if (clip == null) return;
-
-        goblinVoiceSource.PlayOneShot(clip);
-        nextAllowedVoiceTime = Time.time + minTimeBetweenLines;
     }
     #endregion
 }

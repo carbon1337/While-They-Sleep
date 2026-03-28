@@ -104,12 +104,12 @@ public class MenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        ScreenFader.Instance.FadeToScene("Level");
+        ScreenFader.Instance.FadeToScene(1);
     }
 
     public void ReturnToMenu()
     {
-        ScreenFader.Instance.FadeToScene("MainMenu");
+        ScreenFader.Instance.FadeToScene(0);
     }
 
     public void QuitGame()

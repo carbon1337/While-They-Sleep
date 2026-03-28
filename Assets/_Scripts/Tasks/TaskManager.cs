@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TaskManager : MonoBehaviour
 {
@@ -120,7 +121,7 @@ public class TaskManager : MonoBehaviour
         //Debug to check tasks completed
         if (AreAllRequiredTasksCompleted())
         {
-            Debug.Log("All required tasks completed for this night.");
+            ScreenFader.Instance.FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
