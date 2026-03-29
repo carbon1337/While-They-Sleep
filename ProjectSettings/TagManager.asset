@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Pickup
+  - Food
   layers:
   - Default
   - TransparentFX

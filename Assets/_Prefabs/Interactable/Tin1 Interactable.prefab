@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 3085846335250688361}
   m_Layer: 0
   m_Name: Tin1 Interactable
-  m_TagString: Pickup
+  m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,6 +67,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -88,9 +90,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &2806594180253425164
 Rigidbody:
@@ -99,10 +103,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2213230052294149952}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -201,13 +205,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  voicePlayChance: 0.354
-  minTimeBetweenLines: 2
-  goblinVoiceLines:
-  - {fileID: 8300000, guid: e436785f6ff23d042a2a586ea7e53df0, type: 3}
-  - {fileID: 8300000, guid: f261eab4e15886d41bd52126a29ea2bc, type: 3}
-  - {fileID: 8300000, guid: 567b97a0c481dfa4bb2d2facf9ac8f67, type: 3}
-  goblinVoiceSource: {fileID: 815327130731646872}
 --- !u!65 &6017121060100518075
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -217,6 +217,11 @@ public class PickupInteractable : MonoBehaviour, IInteractable
         }
 
         PlayPickupSound();
+
+        if(this.gameObject.tag == "Food")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void Drop()

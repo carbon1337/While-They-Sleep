@@ -57,6 +57,8 @@ public class TaskManager : MonoBehaviour
             if (!task.startHidden && !hasPrerequisites)
             {
                 task.taskState = TaskState.Active;
+                //Start the monologue for first tasks
+                RefreshMonologueUI(task);
             }
         }
 
@@ -116,6 +118,9 @@ public class TaskManager : MonoBehaviour
         //Unlock next tasks if possible
         UnlockAvailableTasks();
 
+        //Save the last completed task for UI
+        taskUIController.SetLastCompletedTask(task);
+
         RefreshTaskUI();
 
         //Debug to check tasks completed
@@ -125,7 +130,7 @@ public class TaskManager : MonoBehaviour
         }
     }
 
-    //Unlock and activate the next tasks after completing previous
+    //Unlock and activate the next tasks after completing previous. Display the monologue for new task
     void UnlockAvailableTasks()
     {
         foreach (TaskData task in currentTasks)
@@ -136,6 +141,7 @@ public class TaskManager : MonoBehaviour
             if (ArePrerequisitesMet(task))
             {
                 task.taskState = TaskState.Active;
+                RefreshMonologueUI(task);
             }
         }
     }
@@ -188,6 +194,14 @@ public class TaskManager : MonoBehaviour
         {
             //Display all current tasks in list
             taskUIController.DisplayTasks(currentTasks);
+        }
+    }
+
+    public void RefreshMonologueUI(TaskData currentTask)
+    {
+        if(taskUIController != null)
+        {
+            taskUIController.DisplayMonologueUI(currentTask);
         }
     }
     #endregion

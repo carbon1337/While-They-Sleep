@@ -30,7 +30,6 @@ public class ScreenFader : MonoBehaviour
     private CanvasGroup canvasGroup;
 
     #region Initialization
-
     void Awake()
     {
         //Ensure only one ScreenFader exists
@@ -85,12 +84,10 @@ public class ScreenFader : MonoBehaviour
         rect.offsetMin = Vector2.zero;
         rect.offsetMax = Vector2.zero;
     }
-
     #endregion
 
 
     #region Fade
-
     //Fade screen from transparent → black
     public IEnumerator FadeOut()
     {
@@ -127,12 +124,10 @@ public class ScreenFader : MonoBehaviour
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
     }
-
     #endregion
 
 
     #region Scene Transition
-
     //Public function used to start a fade transition to a new scene
     public void FadeToScene(int sceneIndex)
     {
@@ -162,6 +157,5 @@ public class ScreenFader : MonoBehaviour
 
         isTransitioning = false;
     }
-
     #endregion
 }
