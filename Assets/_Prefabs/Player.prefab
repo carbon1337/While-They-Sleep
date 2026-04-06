@@ -18,10 +18,10 @@ GameObject:
   - component: {fileID: 8452574263368193433}
   - component: {fileID: 798244217385112704}
   - component: {fileID: 6157880729676083593}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -68,6 +68,8 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -89,9 +91,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &2279845599040942845
 CapsuleCollider:
@@ -188,8 +192,8 @@ MonoBehaviour:
   lookSens: 0.05
   xLookClamp: 65
   camIsFrozen: 0
-  moveSpeed: 5
-  sprintSpeed: 8
+  moveSpeed: 4
+  sprintSpeed: 7
   gravity: -9.81
   crouchToggle: 0
   standHeight: 1.8
@@ -199,9 +203,9 @@ MonoBehaviour:
   crouchLerpSpeed: 12
   enableHeadBob: 1
   bobFrequency: 1
-  bobAmplitude: 0.055
+  bobAmplitude: 0.03
   bobSmoothing: 10
-  timeBetweenFootsteps: 0.6
+  timeBetweenFootsteps: 0.7
   timeBetweenFootstepsRunning: 0.35
   timeBetweenFootstepsCrouch: 0.8
   footstepPitchMin: 0.8

@@ -220,7 +220,7 @@ public class PickupInteractable : MonoBehaviour, IInteractable
 
         if(this.gameObject.tag == "Food")
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 0.2f);
         }
     }
 
