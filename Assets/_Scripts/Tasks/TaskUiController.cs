@@ -27,6 +27,15 @@ public class TaskUIController : MonoBehaviour
     private Coroutine typingCoroutine;
     private TaskData lastCompletedTask;
 
+    private NightUI nightUI;
+
+    #region Initialization
+    void Awake()
+    {
+        nightUI = FindFirstObjectByType<NightUI>();
+    }
+    #endregion
+
     #region Task List
     public void DisplayTasks(List<TaskData> tasks)
     {
@@ -90,6 +99,7 @@ public class TaskUIController : MonoBehaviour
             return;
         }
 
+
         //Stop any currently running typing effect
         if (typingCoroutine != null)
         {
@@ -104,6 +114,15 @@ public class TaskUIController : MonoBehaviour
         //Initialize text
         monologueText.text = "";
         charCounter = 0;
+
+        //Wait for night text to be fully faded before displaying
+        if(nightUI.isTextFaded == false)
+        {
+            yield return new WaitForSeconds(nightUI.textDuration + nightUI.fadeDuration);
+        }
+
+        //Additional delay
+        yield return new WaitForSeconds(1.25f);
 
         //Set visible
         if (monologueCanvasGroup != null)

@@ -15,5 +15,7 @@ MonoBehaviour:
   nightName: Night 2
   tasks:
   - {fileID: 11400000, guid: 2318bff99335227488fd986d5489bbc1, type: 2}
-  - {fileID: 11400000, guid: ce1d0c7f76b169f46ba1dbab88afd41e, type: 2}
+  - {fileID: 11400000, guid: c59ede0741b6a8f4a86eef0a76f1ed74, type: 2}
+  - {fileID: 11400000, guid: cbe6fd42e0b28e342a5f9d8bc37cd529, type: 2}
+  - {fileID: 11400000, guid: 49dc18d55f392f247ba153f3f2b724b4, type: 2}
   isStealth: 1
