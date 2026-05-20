@@ -15,7 +15,7 @@ public class FlashlightInteractable : MonoBehaviour, IInteractable
     [Header("References")]
     public GameObject flashlight;
     public Transform holdPoint;
-    public MeshRenderer renderer;
+    public MeshRenderer flashlightRenderer;
 
     [Header("Runtime")]
     private bool isFlashlightOn = false;
@@ -77,7 +77,7 @@ public class FlashlightInteractable : MonoBehaviour, IInteractable
         isHeld = true;
 
         //Disable viewmodel of flashlight
-        renderer.enabled = false;
+        flashlightRenderer.enabled = false;
 
         //Attach to player hold point
         transform.SetParent(holdPoint);
