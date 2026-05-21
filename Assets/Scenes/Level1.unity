@@ -835,7 +835,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 0.17239231, g: 0.18650019, b: 0.24528301, a: 1}
-  m_Intensity: 0.27
+  m_Intensity: 4.67
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1021,6 +1021,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f078ad1dd24a73a4d91a4c0ecd359639, type: 3}
+--- !u!82 &1620370438 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4751140277573799711, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
+  m_PrefabInstance: {fileID: 6637296922245576621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1656729991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1140,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135355618134961403, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 135355618134961403, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 235114551406439971, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1175,9 +1188,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 525756082430357072, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 588574393566123348, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 588574393566123348, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 843328624154083940, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -17.988
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164603113706717921, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865167689947970382, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254426862231550437, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254426862231550437, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MaxDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254426862231550437, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563960763902203888, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3072347751134910325, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1186,6 +1235,18 @@ PrefabInstance:
     - target: {fileID: 3381903075192650708, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_LocalPosition.z
       value: -20.974
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294056541788946501, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294056541788946501, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5087271631526791039, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5192949451204897900, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1203,9 +1264,77 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 17.65
       objectReference: {fileID: 0}
+    - target: {fileID: 6817068360106791114, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817068360106791114, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181295388483455277, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203131320342585025, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325465795071548776, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7578071733856637334, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_Name
       value: First Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963157955533374597, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018683568401293924, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018683568401293924, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538922673681421104, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538922673681421104, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595857858849535441, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911391169710055064, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911391169710055064, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931800055202531700, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931800055202531700, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055543966399220445, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: m_Volume
+      value: 0.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055543966399220445, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: MinDistance
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1262,6 +1391,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4751140277573799711, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751140277573799711, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
+      propertyPath: MaxDistance
+      value: 2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751140277573799711, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751140277573799711, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5347573426180201648, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
       propertyPath: m_Color.b
       value: 0.6650944
@@ -1286,6 +1431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BASEMENT
       objectReference: {fileID: 0}
+    - target: {fileID: 6480110310832052394, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
+      propertyPath: lightAudioSource
+      value: 
+      objectReference: {fileID: 1620370438}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

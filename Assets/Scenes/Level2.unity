@@ -1280,6 +1280,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3cbd415e451f9844a21905d8241868d, type: 3}
+--- !u!23 &1552404366 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6939956059289026432, guid: 24c49a0a06df8d144bcd43e909eff6b9, type: 3}
+  m_PrefabInstance: {fileID: 1955057071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1553317452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1402,6 +1407,10 @@ PrefabInstance:
       propertyPath: holdPoint
       value: 
       objectReference: {fileID: 383120226}
+    - target: {fileID: 2197450433103617881, guid: 24c49a0a06df8d144bcd43e909eff6b9, type: 3}
+      propertyPath: flashlightRenderer
+      value: 
+      objectReference: {fileID: 1552404366}
     - target: {fileID: 8267429586496995895, guid: 24c49a0a06df8d144bcd43e909eff6b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.141
@@ -1455,6 +1464,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 69272825808600670, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 188942929181684799, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1507,8 +1520,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 525756082430357072, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 736888765562617684, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164603113706717921, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1236924323371213905, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
@@ -1531,6 +1552,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1865167689947970382, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2033083762502492449, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1541,6 +1566,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 92724bef9ccf60446b5d44bc60d0b805, type: 2}
     - target: {fileID: 2376055245823186687, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563960763902203888, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2756654262235631007, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
@@ -1583,6 +1612,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5087271631526791039, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5119408025076182766, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -1623,8 +1656,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7181295388483455277, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7203131320342585025, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7246576996397773259, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325465795071548776, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7359505271677486254, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
@@ -1641,6 +1686,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7734456480024600298, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963157955533374597, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8083175772756712155, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
@@ -1661,6 +1710,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8535117445280831858, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595857858849535441, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
+      propertyPath: lightOnByDefault
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9032335963666448543, guid: 153f447900faaad459e9ee98aaf3f1f8, type: 3}
@@ -1732,6 +1785,10 @@ PrefabInstance:
     - target: {fileID: 6324545804725612155, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
       propertyPath: m_Name
       value: BASEMENT
+      objectReference: {fileID: 0}
+    - target: {fileID: 6480110310832052394, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
+      propertyPath: lightOnByDefault
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6645456208348873413, guid: bfcb3d73a737305498c8f290c4e227c7, type: 3}
       propertyPath: m_IsActive
